@@ -73,8 +73,8 @@ config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
 
 -- ─── OPTIMIZACIONES DE RENDIMIENTO ──────────────────────────
-config.front_end = "WebGpu"
-config.webgpu_power_preference = "LowPower"
+config.front_end = "OpenGL"
+config.enable_wayland = true
 config.max_fps = 60
 config.animation_fps = 30
 config.cursor_blink_rate = 500
