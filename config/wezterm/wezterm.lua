@@ -83,11 +83,36 @@ config.scrollback_lines = 3000  -- Reducido para ahorrar RAM
 
 -- ─── KEYBINDINGS ─────────────────────────────────────────────
 config.keys = {
+    -- Clipboard
     { key = "c", mods = "CTRL|SHIFT", action = wezterm.action.CopyTo("Clipboard") },
     { key = "v", mods = "CTRL|SHIFT", action = wezterm.action.PasteFrom("Clipboard") },
+
+    -- Tabs
     { key = "t", mods = "CTRL|SHIFT", action = wezterm.action.SpawnTab("CurrentPaneDomain") },
     { key = "w", mods = "CTRL|SHIFT", action = wezterm.action.CloseCurrentTab({ confirm = true }) },
     { key = "f", mods = "CTRL|SHIFT", action = wezterm.action.ToggleFullScreen },
+
+    -- Splits (tiling dentro de WezTerm)
+    { key = "\"", mods = "CTRL|SHIFT", action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }) },
+    { key = "%", mods = "CTRL|SHIFT", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+
+    -- Navegar entre paneles
+    { key = "LeftArrow", mods = "CTRL|SHIFT", action = wezterm.action.ActivatePaneDirection("Left") },
+    { key = "RightArrow", mods = "CTRL|SHIFT", action = wezterm.action.ActivatePaneDirection("Right") },
+    { key = "UpArrow", mods = "CTRL|SHIFT", action = wezterm.action.ActivatePaneDirection("Up") },
+    { key = "DownArrow", mods = "CTRL|SHIFT", action = wezterm.action.ActivatePaneDirection("Down") },
+
+    -- Redimensionar paneles
+    { key = "LeftArrow", mods = "ALT|SHIFT", action = wezterm.action.AdjustPaneSize({ "Left", 5 }) },
+    { key = "RightArrow", mods = "ALT|SHIFT", action = wezterm.action.AdjustPaneSize({ "Right", 5 }) },
+    { key = "UpArrow", mods = "ALT|SHIFT", action = wezterm.action.AdjustPaneSize({ "Up", 5 }) },
+    { key = "DownArrow", mods = "ALT|SHIFT", action = wezterm.action.AdjustPaneSize({ "Down", 5 }) },
+
+    -- Zoom panel (toggle)
+    { key = "z", mods = "CTRL|SHIFT", action = wezterm.action.TogglePaneZoomState },
+
+    -- Cerrar panel actual
+    { key = "x", mods = "CTRL|SHIFT", action = wezterm.action.CloseCurrentPane({ confirm = true }) },
 }
 
 return config
