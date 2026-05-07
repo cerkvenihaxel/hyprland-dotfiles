@@ -1,0 +1,60 @@
+# ╔══════════════════════════════════════════════════════════════╗
+# ║  Dunst - Cyberpunk Notifications                            ║
+# ╚══════════════════════════════════════════════════════════════╝
+
+[global]
+    monitor = 0
+    follow = mouse
+    width = 320
+    height = 100
+    origin = top-right
+    offset = 10x10
+    notification_limit = 3
+    progress_bar = true
+
+    # Apariencia
+    frame_width = 2
+    frame_color = "#ff00ff"
+    separator_height = 2
+    separator_color = "#1a1a2e"
+    padding = 12
+    horizontal_padding = 14
+    corner_radius = 10
+    transparency = 5
+
+    # Fuente
+    font = Ubuntu Nerd Font 11
+
+    # Formato
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    vertical_alignment = center
+    show_age_threshold = 60
+    ellipsize = end
+    icon_position = left
+    max_icon_size = 48
+
+    # Comportamiento
+    sort = yes
+    idle_threshold = 120
+    show_indicators = yes
+    mouse_left_click = close_current
+    mouse_right_click = close_all
+
+[urgency_low]
+    background = "#0d0d1aee"
+    foreground = "#e0e0e0"
+    frame_color = "#00ffff"
+    timeout = 4
+
+[urgency_normal]
+    background = "#0d0d1aee"
+    foreground = "#e0e0e0"
+    frame_color = "#ff00ff"
+    timeout = 6
+
+[urgency_critical]
+    background = "#1a0a1aee"
+    foreground = "#ff0055"
+    frame_color = "#ff0055"
+    timeout = 0

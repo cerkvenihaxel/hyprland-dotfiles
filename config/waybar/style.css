@@ -1,0 +1,132 @@
+/* ╔══════════════════════════════════════════════════════════════╗
+   ║  Waybar - Cyberpunk Neon Theme                              ║
+   ╚══════════════════════════════════════════════════════════════╝ */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Ubuntu Nerd Font";
+    font-size: 12px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(13, 13, 26, 0.85);
+    border-bottom: 2px solid rgba(255, 0, 255, 0.4);
+    border-radius: 10px;
+    color: #e0e0e0;
+}
+
+/* ─── WORKSPACES ──────────────────────────────────────────── */
+#workspaces button {
+    padding: 0 8px;
+    margin: 3px 2px;
+    border-radius: 6px;
+    color: #4a4a6a;
+    background: transparent;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+    color: #00ffff;
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.4);
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+}
+
+#workspaces button:hover {
+    color: #ff00ff;
+    background: rgba(255, 0, 255, 0.1);
+}
+
+/* ─── RELOJ ───────────────────────────────────────────────── */
+#clock {
+    color: #ff00ff;
+    font-weight: bold;
+    text-shadow: 0 0 6px rgba(255, 0, 255, 0.5);
+}
+
+/* ─── MÓDULOS DERECHA ─────────────────────────────────────── */
+#cpu,
+#memory,
+#temperature,
+#battery,
+#pulseaudio,
+#network {
+    padding: 0 10px;
+    margin: 3px 2px;
+    border-radius: 6px;
+    background: rgba(26, 26, 46, 0.6);
+}
+
+#cpu {
+    color: #00ff9f;
+}
+
+#memory {
+    color: #00aaff;
+}
+
+#temperature {
+    color: #ffb800;
+}
+
+#temperature.critical {
+    color: #ff0055;
+    animation: blink 0.5s alternate infinite;
+}
+
+#battery {
+    color: #00ffff;
+}
+
+#battery.warning {
+    color: #ffb800;
+}
+
+#battery.critical {
+    color: #ff0055;
+    animation: blink 0.5s alternate infinite;
+}
+
+#battery.charging {
+    color: #00ff9f;
+}
+
+#pulseaudio {
+    color: #ff00ff;
+}
+
+#pulseaudio.muted {
+    color: #4a4a6a;
+}
+
+#network {
+    color: #00ffff;
+}
+
+#network.disconnected {
+    color: #ff0055;
+}
+
+#tray {
+    padding: 0 8px;
+    margin: 3px 2px;
+}
+
+/* ─── ANIMACIONES ─────────────────────────────────────────── */
+@keyframes blink {
+    to {
+        opacity: 0.3;
+    }
+}
+
+/* ─── TOOLTIP ─────────────────────────────────────────────── */
+tooltip {
+    background: rgba(13, 13, 26, 0.95);
+    border: 1px solid #ff00ff;
+    border-radius: 8px;
+}
+
+tooltip label {
+    color: #e0e0e0;
+}

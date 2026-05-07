@@ -1,0 +1,72 @@
+/* ╔══════════════════════════════════════════════════════════════╗
+   ║  Wofi - Cyberpunk Neon Theme                                ║
+   ╚══════════════════════════════════════════════════════════════╝ */
+
+window {
+    margin: 0px;
+    border: 2px solid #ff00ff;
+    border-radius: 12px;
+    background-color: rgba(13, 13, 26, 0.95);
+    font-family: "Ubuntu Nerd Font";
+    font-size: 14px;
+}
+
+#input {
+    margin: 8px;
+    padding: 10px 16px;
+    border: none;
+    border-bottom: 2px solid #00ffff;
+    border-radius: 8px;
+    background-color: rgba(26, 26, 46, 0.9);
+    color: #00ffff;
+    font-size: 14px;
+    outline: none;
+}
+
+#input:focus {
+    border-bottom-color: #ff00ff;
+    box-shadow: 0 2px 8px rgba(255, 0, 255, 0.3);
+}
+
+#inner-box {
+    margin: 4px 8px;
+    border: none;
+    background-color: transparent;
+}
+
+#outer-box {
+    margin: 0px;
+    border: none;
+    background-color: transparent;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#text {
+    margin: 0px 8px;
+    color: #e0e0e0;
+}
+
+#entry {
+    padding: 8px 12px;
+    margin: 2px 0px;
+    border-radius: 8px;
+    border: none;
+}
+
+#entry:selected {
+    background-color: rgba(255, 0, 255, 0.15);
+    border: 1px solid rgba(255, 0, 255, 0.5);
+}
+
+#entry:selected #text {
+    color: #ff00ff;
+    font-weight: bold;
+}
+
+#img {
+    margin-right: 8px;
+}
