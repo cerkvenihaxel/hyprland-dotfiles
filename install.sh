@@ -69,9 +69,7 @@ sudo pacman -S --noconfirm --needed \
 
 echo -e "${CYAN}[4/7] Instalando utilidades de optimización...${NC}"
 sudo pacman -S --noconfirm --needed \
-    zram-generator \
-    preload \
-    thermald
+    zram-generator
 
 echo -e "${CYAN}[5/7] Instalando yay (AUR helper) si no existe...${NC}"
 if ! command -v yay &> /dev/null; then
